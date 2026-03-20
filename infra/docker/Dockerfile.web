@@ -1,0 +1,13 @@
+FROM node:22-alpine
+
+WORKDIR /app
+
+RUN corepack enable
+
+COPY . .
+
+RUN pnpm install --no-frozen-lockfile
+RUN pnpm --filter @netflix-mini/types build
+RUN pnpm --filter web build
+
+CMD ["pnpm", "--filter", "web", "start"]

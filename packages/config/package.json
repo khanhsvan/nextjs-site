@@ -1,0 +1,16 @@
+{
+  "name": "@netflix-mini/config",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@netflix-mini/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}
